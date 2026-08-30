@@ -1,0 +1,310 @@
+{
+  "users": [
+    {
+      "id": "u17879304617096366",
+      "name": "Ravi Kumar",
+      "email": "ravi1787930457783@vroom.in",
+      "role": "user",
+      "salt": "4ac8bdeac467e0ce6b2c11a77883eb67",
+      "passwordHash": "6a0676d4f1fb88ff856f35051ff64b389092d002eb2c770b48bea382efe044891f53576d6619a39e3c802759a220b7d9f6969a5fa29e2a7722d23eb8b15a2d4d",
+      "createdAt": "2026-08-28T15:21:01.762Z",
+      "preferences": {
+        "vehicleType": "car",
+        "routeMode": "fastest",
+        "avoidToll": false,
+        "avoidHighway": false,
+        "language": "en",
+        "theme": "dark"
+      },
+      "savedLocations": [],
+      "history": []
+    },
+    {
+      "id": "u17879305313228219",
+      "name": "Demo Admin",
+      "email": "admin@vroom.in",
+      "role": "user",
+      "salt": "5ec0871879b23f55faf5248e49c9cdfa",
+      "passwordHash": "a8ddfe99de3b98443ae0cfeafaef2ec6e6b9879dea27055949cc5dad4d044177526c7940b47d692a3c9785052926cbbdaa7910bb104555bb41578b843e89f8eb",
+      "createdAt": "2026-08-28T15:22:11.371Z",
+      "preferences": {
+        "vehicleType": "car",
+        "routeMode": "fastest",
+        "avoidToll": false,
+        "avoidHighway": false,
+        "language": "en",
+        "theme": "dark"
+      },
+      "savedLocations": [],
+      "history": []
+    },
+    {
+      "id": "u1787930531477878",
+      "name": "Demo User",
+      "email": "user@vroom.in",
+      "role": "user",
+      "salt": "097ef9deab9c69cf6bd12ed578ba2dee",
+      "passwordHash": "627d5e90524d541f96de6dcbb68360b3d435b1d3ae2a8c802650392d572c3bff8312fe7ff7a7cd5a8c2c08da8376e401c639e37333dbd40f168d238aad8b35cb",
+      "createdAt": "2026-08-28T15:22:11.527Z",
+      "preferences": {
+        "vehicleType": "car",
+        "routeMode": "fastest",
+        "avoidToll": false,
+        "avoidHighway": false,
+        "language": "en",
+        "theme": "dark"
+      },
+      "savedLocations": [],
+      "history": [
+        {
+          "id": "h178793412195771",
+          "from": "NH47",
+          "to": "Lasanpur",
+          "distanceKm": 98,
+          "durationMin": 85,
+          "createdAt": "2026-08-28T16:22:01.957Z"
+        },
+        {
+          "id": "h17879340827364325",
+          "from": "Para Khere Bhata",
+          "to": "Rampura Tehsil",
+          "distanceKm": 504,
+          "durationMin": 419,
+          "createdAt": "2026-08-28T16:21:22.736Z"
+        },
+        {
+          "id": "h17879340776518411",
+          "from": "Para Khere Bhata",
+          "to": "Rampura Tehsil",
+          "distanceKm": 497,
+          "durationMin": 405,
+          "createdAt": "2026-08-28T16:21:17.651Z"
+        },
+        {
+          "id": "h17879335348194354",
+          "from": "Kalpi",
+          "to": "Imlia",
+          "distanceKm": 297,
+          "durationMin": 261,
+          "createdAt": "2026-08-28T16:12:14.820Z"
+        },
+        {
+          "id": "h17879335200619164",
+          "from": "Kalpi",
+          "to": "Imlia",
+          "distanceKm": 151,
+          "durationMin": 144,
+          "createdAt": "2026-08-28T16:12:00.061Z"
+        },
+        {
+          "id": "h17879335071897188",
+          "from": "Kalpi",
+          "to": "Imlia",
+          "distanceKm": 135,
+          "durationMin": 140,
+          "createdAt": "2026-08-28T16:11:47.189Z"
+        }
+      ]
+    },
+    {
+      "id": "u17879357125864658",
+      "name": "Ravi Kumar",
+      "email": "ravi1787935708515@vroom.in",
+      "role": "user",
+      "salt": "78f7479e552242454ac89179227b4a9a",
+      "passwordHash": "17c559c66e7f75edee71f485b1eff24ca3b2a014b8d2d0b2d8ed78b5ebe10d01b8276e4e8676dcedc11734a292ea2ecc5ba6ef80512dc40583456e71e074541e",
+      "createdAt": "2026-08-28T16:48:32.654Z",
+      "preferences": {
+        "vehicleType": "car",
+        "routeMode": "fastest",
+        "avoidToll": false,
+        "avoidHighway": false,
+        "language": "en",
+        "theme": "dark"
+      },
+      "savedLocations": [],
+      "history": []
+    },
+    {
+      "id": "u17880653239968685",
+      "name": "devanshu raut",
+      "email": "devanshuraut8767@gmail.com",
+      "role": "user",
+      "salt": "d2e044fbd8fcaa53aab517d264df91b9",
+      "passwordHash": "cf2fbdde1a6977da6dbdfe9b971809f555575406e287dc3c6d41802f07a203bf009c392ec64ace4b7a0ef154eee9767d6e30cd9f86a84f2c44e72082659bd9f0",
+      "createdAt": "2026-08-30T04:48:44.055Z",
+      "preferences": {
+        "vehicleType": "car",
+        "routeMode": "fastest",
+        "avoidToll": false,
+        "avoidHighway": false,
+        "language": "en",
+        "theme": "dark"
+      },
+      "savedLocations": [],
+      "history": []
+    }
+  ],
+  "sessions": [
+    {
+      "token": "4823462682e2a85b6beb60414682ecdf87d5e931df52ac3575e181efa24f5ac8",
+      "userId": "u17879304617096366",
+      "createdAt": "2026-08-28T15:21:07.238Z"
+    },
+    {
+      "token": "f60279bcebdcfefc6555a122b17889ccefa6e13b5ac1fb4069fe313c7f194c7e",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T15:22:11.371Z"
+    },
+    {
+      "token": "26dc449ab7c967487601ad35a605fb1831b32ff7f3eb286118e5955db4f9d725",
+      "userId": "u1787930531477878",
+      "createdAt": "2026-08-28T15:22:11.528Z"
+    },
+    {
+      "token": "e9d33687f57affc5ffe30b18f423d6b6ac5f97061136e5a944f1f269d9cb8ef3",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T15:22:11.582Z"
+    },
+    {
+      "token": "f24ba6d7eb641952492c9c1ddb44e55626789bc79d7b511aca3019226f4cf7c5",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T15:41:52.875Z"
+    },
+    {
+      "token": "b3d6d21fc455c01e6319844a4fe8396ff7a393ff7ff26b61d7961f6fe9841833",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T15:54:41.424Z"
+    },
+    {
+      "token": "fed71bcd3297d6684a64b683b1cb64a8a4c3f3c8ad13a2c6bc7fffa5c78ecb56",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T16:01:03.797Z"
+    },
+    {
+      "token": "7eb8873bd9e98de96660c2c76426d08da48aba8e902b75a282255d686ff0fd5a",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T16:01:40.875Z"
+    },
+    {
+      "token": "f0f415dc293c2e69d8335b143c9da1c0b4a12c07a543b46672b5d9b1d6bfabd4",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T16:01:53.277Z"
+    },
+    {
+      "token": "9ce770b8759efe0a1619ec2cdbfb8c78d94cda29960fb3b4b76bca8db578fa26",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T16:02:16.382Z"
+    },
+    {
+      "token": "835c6ac085f0096c8d01317a957585f0cc98613bd81a5879dbf180e6761a0f13",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T16:03:29.407Z"
+    },
+    {
+      "token": "90c03be65fa35e4d3ce8991f9fa7b98be680008622cab8ce141d906a30622fbd",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T16:04:51.864Z"
+    },
+    {
+      "token": "f8cf2750ce5dbd519e26a245986790ba12e81b902bf1b4a188f65476b1d8baf7",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T16:06:49.556Z"
+    },
+    {
+      "token": "6a7022efa828485951e012cf1c7af1a13e6a686e50558f52a2123aa999ae0529",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T16:06:53.746Z"
+    },
+    {
+      "token": "074e117c00e22314c4b5fb88ac3086ea3772ef2567e9f6b89403acca21428750",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T16:14:50.246Z"
+    },
+    {
+      "token": "63689df69499189549f115e19e66eedfdb69f9b3b1e6bf8b34115d5311daa5ff",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T16:15:36.980Z"
+    },
+    {
+      "token": "c31c42e089de9fbddf8befd677ec6b052071af55ba651dc481b9aeeeaa982089",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T16:17:39.200Z"
+    },
+    {
+      "token": "cfd115ce3a735fbd978c1aa2bcfcea21859f7dbb9b5f89003e7b446c52cd6713",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T16:18:26.007Z"
+    },
+    {
+      "token": "ef80a038d2ed097db4cbf814bcb48e9c9aa63cb4929dbc16efc20170be3d0632",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T16:18:45.879Z"
+    },
+    {
+      "token": "9c5909af0da2c19c716be29a2e90bd99c9ccd551e1067e73f27bdb55b54379dc",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T16:19:15.298Z"
+    },
+    {
+      "token": "0ae4ebfce24926255e669edf1821cb0ab5a0e330cf8e91f84bcba7f0b458ead1",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T16:19:53.584Z"
+    },
+    {
+      "token": "2538f6905a1c456291c8216944cbc43fc16c9baf73c193c0e66cdd55e1cc2098",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T16:39:14.938Z"
+    },
+    {
+      "token": "e2d66f28c281581add06ad1a3a83ecd82eb5c7df98b0749cd2fe8694c247fbff",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T16:40:46.723Z"
+    },
+    {
+      "token": "8e3b22924aeb1b3dfd583c91a8c3297f8d45ac4fa307ff3f71dfb23889e8d4c8",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T16:41:35.715Z"
+    },
+    {
+      "token": "21303e1e32f0bf54aeac370b2ce8b89fe50f610c4b3c5065135624ee654d2d97",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T16:42:20.337Z"
+    },
+    {
+      "token": "9ecbd4a9fb7792ae95d35532ebade4a2bcea583a1dfd7ec8110e85bf32528593",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T16:43:07.831Z"
+    },
+    {
+      "token": "63999fed5740e0bddfbe2133749f9867771a18dd9c4e1a41162106833a65460d",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T16:43:50.551Z"
+    },
+    {
+      "token": "cf18cf7c64924116cf3fa6668d4c3aa74d9b0b0ab9c5cf9c00367e9ad30d1c94",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T16:45:39.644Z"
+    },
+    {
+      "token": "4b9eff88f777f0faad1349248432eebc6714020b3c2f7dd23ea58f2059821976",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T16:46:45.065Z"
+    },
+    {
+      "token": "3c67d2f45ab75016ff3bc9cb2d17dd1e8188b7435349070d635c66cea848eb97",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T16:48:05.171Z"
+    },
+    {
+      "token": "f669252289a9ad4040155a7a53235c50839bc447c4033436e65c7bb68630e3e7",
+      "userId": "u17879357125864658",
+      "createdAt": "2026-08-28T16:48:38.222Z"
+    },
+    {
+      "token": "8aca6ff8c9c19761c72797eff86387d34822847bb24b1efc1e29fcd0ef94a617",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-30T04:51:37.287Z"
+    }
+  ]
+}

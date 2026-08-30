@@ -1,0 +1,82 @@
+{
+  "reports": [
+    {
+      "id": "r1787935546683707",
+      "type": "pothole",
+      "title": "Pothole",
+      "description": "Test E2E report via browser.",
+      "lat": 23.20096,
+      "lng": 79.49707,
+      "status": "open",
+      "reportedBy": "Demo Admin",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T16:45:46.683Z",
+      "votes": 0
+    },
+    {
+      "id": "r17879340006578388",
+      "type": "pothole",
+      "title": "Pothole",
+      "description": "Test E2E report via browser.",
+      "lat": 23.20096,
+      "lng": 79.49707,
+      "status": "open",
+      "reportedBy": "Demo Admin",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T16:20:00.657Z",
+      "votes": 0
+    },
+    {
+      "id": "r17879332207721719",
+      "type": "pothole",
+      "title": "Pothole",
+      "description": "Test E2E report via browser.",
+      "lat": 23.20096,
+      "lng": 79.49707,
+      "status": "open",
+      "reportedBy": "Demo Admin",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T16:07:00.772Z",
+      "votes": 0
+    },
+    {
+      "id": "r1787933209641725",
+      "type": "waterlogging",
+      "title": "Waterlogging",
+      "description": "Waterlogged underpass after recent rain, avoid at peak.",
+      "lat": 28.6519,
+      "lng": 77.1909,
+      "status": "open",
+      "reportedBy": "Demo Admin",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T16:06:49.641Z",
+      "votes": 0
+    },
+    {
+      "id": "r17879332096399058",
+      "type": "traffic",
+      "title": "Heavy Traffic",
+      "description": "Heavy congestion at Connaught Place due to ongoing repairs.",
+      "lat": 28.6315,
+      "lng": 77.2167,
+      "status": "open",
+      "reportedBy": "Demo Admin",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T16:06:49.639Z",
+      "votes": 0
+    },
+    {
+      "id": "r17879332096354903",
+      "type": "pothole",
+      "title": "Pothole",
+      "description": "Large pothole near India Gate, slow traffic.",
+      "lat": 28.6139,
+      "lng": 77.209,
+      "status": "open",
+      "reportedBy": "Demo Admin",
+      "userId": "u17879305313228219",
+      "createdAt": "2026-08-28T16:06:49.635Z",
+      "votes": 0
+    }
+  ]
+}

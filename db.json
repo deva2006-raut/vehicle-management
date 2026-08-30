@@ -1,0 +1,76 @@
+{
+  "vehicles": [
+    {
+      "name": "MH-11-BK-2000",
+      "number": "647378778278272832",
+      "capacity": [
+        7
+      ],
+      "type": "van",
+      "fuelType": "diesel",
+      "status": "maintenance",
+      "driverId": "",
+      "id": 0,
+      "color": "#6366f1",
+      "start": [
+        40.758,
+        -73.9855
+      ],
+      "end": [
+        40.758,
+        -73.9855
+      ]
+    }
+  ],
+  "drivers": [],
+  "orders": [
+    {
+      "location": [
+        21.218724827335357,
+        79.22974183962073
+      ],
+      "description": "Kanhan, Parseoni, Nagpur, Maharashtra, 441404, India",
+      "demand": [
+        1000
+      ],
+      "service": 300,
+      "customer": "deva",
+      "phone": "87657130074",
+      "priority": 3,
+      "status": "dispatched",
+      "id": 104
+    },
+    {
+      "location": [
+        21.1498134,
+        79.0820556
+      ],
+      "description": "Nagpur, Nagpur Urban Taluka, Nagpur, Maharashtra, India",
+      "demand": [
+        10
+      ],
+      "service": 300,
+      "customer": "Nagpur",
+      "phone": "",
+      "priority": 1,
+      "status": "dispatched",
+      "id": 105
+    },
+    {
+      "location": [
+        21.143402485469803,
+        79.07646852652816
+      ],
+      "description": "Amravati Road, Ramdaspeth, Nagpur, Nagpur Urban Taluka, Nagpur, Maharashtra, 440002, India",
+      "demand": [
+        10
+      ],
+      "service": 300,
+      "customer": "Recipient at Stop",
+      "phone": "",
+      "priority": 1,
+      "status": "dispatched",
+      "id": 106
+    }
+  ]
+}
