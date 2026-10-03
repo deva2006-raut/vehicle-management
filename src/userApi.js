@@ -11,22 +11,50 @@ const path = require('path');
 
 const USER_DB = path.join(__dirname, '../users.json');
 
+// Writable data file resolution: on read-only filesystems (Vercel serverless)
+// fall back to /tmp so seeding never crashes the app.
+function resolveUserDb() {
+  try {
+    fs.accessSync(path.dirname(USER_DB), fs.constants.W_OK);
+    if (!fs.existsSync(USER_DB)) return USER_DB;
+    try {
+      fs.accessSync(USER_DB, fs.constants.W_OK);
+      return USER_DB;
+    } catch (e) {
+      /* not writable -> tmp */
+    }
+  } catch (e) {
+    /* dir not writable -> tmp */
+  }
+  const tmpDb = path.join(process.env.TMPDIR || '/tmp', 'vm-users.json');
+  return tmpDb;
+}
+
 function seedUsers() {
-  if (!fs.existsSync(USER_DB)) {
-    fs.writeFileSync(USER_DB, JSON.stringify({ users: [], sessions: [] }, null, 2));
+  const dbPath = resolveUserDb();
+  if (!fs.existsSync(dbPath)) {
+    try {
+      fs.writeFileSync(dbPath, JSON.stringify({ users: [], sessions: [] }, null, 2));
+    } catch (e) {
+      /* read-only FS: in-memory only */
+    }
   }
 }
 
 function readDB() {
   try {
-    return JSON.parse(fs.readFileSync(USER_DB, 'utf8'));
+    return JSON.parse(fs.readFileSync(resolveUserDb(), 'utf8'));
   } catch (e) {
     return { users: [], sessions: [] };
   }
 }
 
 function writeDB(db) {
-  fs.writeFileSync(USER_DB, JSON.stringify(db, null, 2));
+  try {
+    fs.writeFileSync(resolveUserDb(), JSON.stringify(db, null, 2));
+  } catch (e) {
+    /* read-only FS: state kept in memory for this invocation only */
+  }
 }
 
 function hashPassword(password, salt) {

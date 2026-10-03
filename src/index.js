@@ -61,21 +61,45 @@ mountUserApi(app);
 // Community road problem reporting (pothole/accident/closure/... map markers).
 mountReportsApi(app, { authUserByToken: require('./userApi.js').authUserByToken });
 
-// Simple JSON Database setup
+// Simple JSON Database setup. On read-only filesystems (Vercel serverless)
+// fall back to a /tmp copy so booting never crashes the app.
 const dbFile = path.join(__dirname, '../db.json');
-if (!fs.existsSync(dbFile)) {
-  fs.writeFileSync(
-    dbFile,
-    JSON.stringify({vehicles: [], drivers: [], orders: []}, null, 2)
-  );
+let activeDbFile = dbFile;
+try {
+  if (!fs.existsSync(dbFile)) {
+    fs.writeFileSync(
+      dbFile,
+      JSON.stringify({vehicles: [], drivers: [], orders: []}, null, 2)
+    );
+  }
+} catch (err) {
+  activeDbFile = path.join(process.env.TMPDIR || '/tmp', 'vm-db.json');
+  try {
+    if (!fs.existsSync(activeDbFile)) {
+      fs.writeFileSync(
+        activeDbFile,
+        JSON.stringify({vehicles: [], drivers: [], orders: []}, null, 2)
+      );
+    }
+  } catch (err2) {
+    /* fully read-only FS: endpoints fall back to defaults */
+  }
 }
 
 function readDB() {
-  return JSON.parse(fs.readFileSync(dbFile, 'utf8'));
+  try {
+    return JSON.parse(fs.readFileSync(activeDbFile, 'utf8'));
+  } catch (err) {
+    return {vehicles: [], drivers: [], orders: []};
+  }
 }
 
 function writeDB(data) {
-  fs.writeFileSync(dbFile, JSON.stringify(data, null, 2));
+  try {
+    fs.writeFileSync(activeDbFile, JSON.stringify(data, null, 2));
+  } catch (err) {
+    /* read-only FS: state kept in memory for this invocation only */
+  }
 }
 
 // REST API Endpoints for Persistence
@@ -392,14 +416,21 @@ app.get(args.baseurl + 'health', (req, res) => {
 });
 
 const HOST = '0.0.0.0'; // Bind to all interfaces for full LAN access
-const server = app.listen(args.port, HOST, () => {
-  console.log('vroom-express listening on port ' + args.port + '!');
-  console.log('Dashboard available at http://localhost:' + args.port + '/dashboard/');
-  console.log(
-    'Accessible from other devices on the network via http://<this-machine-ip>:' +
-      args.port +
-      '/dashboard/'
-  );
-});
+if (require.main === module) {
+  // Standalone mode (npm start / LAN server). On Vercel the app is loaded
+  // from api/index.js as a serverless handler and never runs this branch.
+  const server = app.listen(args.port, HOST, () => {
+    console.log('vroom-express listening on port ' + args.port + '!');
+    console.log(
+      'Dashboard available at http://localhost:' + args.port + '/dashboard/'
+    );
+    console.log(
+      'Accessible from other devices on the network via http://<this-machine-ip>:' +
+        args.port +
+        '/dashboard/'
+    );
+  });
+  server.setTimeout(args.timeout);
+}
 
-server.setTimeout(args.timeout);
+module.exports = app;

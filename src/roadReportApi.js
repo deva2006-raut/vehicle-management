@@ -22,22 +22,49 @@ const REPORT_TYPES = {
 };
 const VALID_TYPES = Object.keys(REPORT_TYPES);
 
+// Writable data file resolution: on read-only filesystems (Vercel
+// serverless) fall back to /tmp so seeding never crashes the app.
+function resolveReportsDb() {
+  try {
+    fs.accessSync(path.dirname(REPORTS_DB), fs.constants.W_OK);
+    if (!fs.existsSync(REPORTS_DB)) return REPORTS_DB;
+    try {
+      fs.accessSync(REPORTS_DB, fs.constants.W_OK);
+      return REPORTS_DB;
+    } catch (e) {
+      /* not writable -> tmp */
+    }
+  } catch (e) {
+    /* dir not writable -> tmp */
+  }
+  return path.join(process.env.TMPDIR || '/tmp', 'vm-reports.json');
+}
+
 function seed() {
-  if (!fs.existsSync(REPORTS_DB)) {
-    fs.writeFileSync(REPORTS_DB, JSON.stringify({ reports: [] }, null, 2));
+  const dbPath = resolveReportsDb();
+  if (!fs.existsSync(dbPath)) {
+    try {
+      fs.writeFileSync(dbPath, JSON.stringify({ reports: [] }, null, 2));
+    } catch (e) {
+      /* read-only FS: in-memory only */
+    }
   }
 }
 
 function readDB() {
   try {
-    return JSON.parse(fs.readFileSync(REPORTS_DB, 'utf8'));
+    return JSON.parse(fs.readFileSync(resolveReportsDb(), 'utf8'));
   } catch (e) {
     return { reports: [] };
   }
 }
 
 function writeDB(db) {
-  fs.writeFileSync(REPORTS_DB, JSON.stringify(db, null, 2));
+  try {
+    fs.writeFileSync(resolveReportsDb(), JSON.stringify(db, null, 2));
+  } catch (e) {
+    /* read-only FS: state kept in memory for this invocation only */
+  }
 }
 
 function json(res, code, body) {

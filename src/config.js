@@ -5,7 +5,11 @@ const path = require('path');
 
 let config_yml;
 try {
-  config_yml = yaml.load(fs.readFileSync('./config.yml'));
+  // CWD-proof path so the app also boots inside read-only/moved-CWD
+  // environments (e.g. Vercel serverless functions).
+  config_yml = yaml.load(
+    fs.readFileSync(path.join(__dirname, '../config.yml'))
+  );
 } catch (err) {
   console.log(
     'Please provide a valid config.yml in the root.\nSee https://github.com/VROOM-Project/vroom-express#setup\n'
@@ -16,8 +20,15 @@ try {
 
 // Prefer env variable for router & access.log
 const router = process.env.VROOM_ROUTER || config_yml.cliArgs.router;
-const logdir =
+// Vercel serverless: writable /tmp only. Fall back to it instead of crashing
+// when the default log directory is not writable.
+let logdir =
   process.env.VROOM_LOG || path.join(__dirname, config_yml.cliArgs.logdir);
+try {
+  fs.accessSync(logdir, fs.constants.W_OK);
+} catch (err) {
+  logdir = process.env.TMPDIR || '/tmp';
+}
 
 let baseurl = config_yml.cliArgs.baseurl;
 if (baseurl.substr(-1) !== '/') {

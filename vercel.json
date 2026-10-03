@@ -1,0 +1,20 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "builds": [
+    {
+      "src": "api/index.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    { "src": "/dashboard/assets/(.*)", "dest": "/dashboard/assets/$1" },
+    { "src": "/dashboard/(.*)", "dest": "/api/index" },
+    { "src": "/api/(.*)", "dest": "/api/index" },
+    { "src": "/(.*\\.(?:js|css|svg|png|jpg|jpeg|gif|woff|woff2|map))", "dest": "/$1" },
+    { "src": "/(.*)", "dest": "/api/index" }
+  ]
+}
