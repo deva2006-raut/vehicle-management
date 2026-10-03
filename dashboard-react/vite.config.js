@@ -2,9 +2,6 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
-// NOTE: deployed single-domain on Vercel now, root vercel.json prebuilds
-// this app into ../public (default outDir). The dashboard-react/vercel.json
-// outDir override only applies when this folder is deployed standalone.
 export default defineConfig({
   // Use relative asset paths so the built HTML works when served under a
   // sub-path like /dashboard/ (vroom-express mounts ../public at /dashboard).
