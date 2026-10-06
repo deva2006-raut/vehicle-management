@@ -118,6 +118,13 @@ export default function Layout({
           </Button>
         </Box>
 
+        <Box sx={{ px: 2, pb: 1 }}>
+          <Typography variant="caption" sx={{ color: 'var(--text-muted)', fontSize: '11px' }}>
+            Built by <a href="https://github.com/deva2006-raut" style={{ color: 'inherit' }}>Devanshu Raut</a>
+            {' · '}<a href="https://www.linkedin.com/in/devanshu-raut-632167334/" target="_blank" rel="noreferrer" style={{ color: 'var(--accent-indigo)', textDecoration: 'none' }}>LinkedIn</a>
+          </Typography>
+        </Box>
+
         {/* Footer User Profile Card */}
         <Box sx={{ 
           p: 2, 

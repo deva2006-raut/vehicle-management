@@ -89,6 +89,10 @@ curl --header "Content-Type:application/json" \
 
 See the [VROOM API documentation](https://github.com/VROOM-Project/vroom/blob/master/docs/API.md) for the full input syntax.
 
+## 🔗 Connect
+
+- [LinkedIn — Devanshu Raut](https://www.linkedin.com/in/devanshu-raut-632167334/)
+
 ## 📄 License
 
 Dashboard & custom code: **MIT** © 2026 Devanshu Raut.
